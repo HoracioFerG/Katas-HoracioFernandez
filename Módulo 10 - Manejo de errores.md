@@ -39,7 +39,7 @@ Traceback (most recent call last):
 FileNotFoundError: [Errno 2] No such file or directory: '/path/to/mars.jpg'
 ```
 
-![](images/img1.png)
+![](images/img1.PNG)
 
 Esa salida tiene varias partes clave. En primer lugar, el traceback menciona el orden de la salida. Después, informa de que el archivo es `stdin` (entrada en el terminal interactivo) en la primera línea de la entrada. El error es `FileNotFoundError` (el nombre de excepción), lo que significa que el archivo no existe o quizás el directorio correspondiente no existe.
 
@@ -64,7 +64,7 @@ Traceback (most recent call last):
     open("/path/to/mars.jpg")
 FileNotFoundError: [Errno 2] No such file or directory: '/path/to/mars.jpg'
 ```
-![](images/img2.png)
+![](images/img2.PNG)
 
 La salida de error tiene más sentido ahora. Las rutas de acceso apuntan a un único archivo denominado *open.py*. La salida menciona que el error se inicia en la línea 5, que incluye la llamada a `main()`. A continuación, la salida sigue el error a la línea 2 en la llamada de función `open()`. Y, por último, `FileNotFoundError` notifica de nuevo que el archivo o el directorio no existen.
 
@@ -95,7 +95,7 @@ Vamos a usar el ejemplo de navegador a fin de crear código que abra archivos de
 Couldn't find the config.txt file!
 ```
 
-![](images/img3.png)
+![](images/img3.PNG)
 
 Después de la palabra clave `try`, agregamos código que tenga la posibilidad de producir una excepción. A continuación, agregamos la palabra clave `except` junto con la posible excepción, seguida de cualquier código que deba ejecutarse cuando se produce esa condición. Puesto que config.txt no existe en el sistema, Python imprime que el archivo de configuración no está ahí. El bloque `try` y `except`, junto con un mensaje útil, evita un seguimiento y sigue informando al usuario sobre el problema.
 
@@ -136,7 +136,7 @@ Ahora volvemos a ejecutar el código en el mismo lugar donde existe el archivo *
 $ python config.py
 Couldn't find the config.txt file!
 ```
-![](images/img4.png)
+![](images/img4.PNG)
 
 El problema ahora es que el mensaje de error es incorrecto. El archivo existe, pero tiene permisos diferentes y Python no puede leerlo. Cuando se trata con errores de software, puede resultar frustrante tener errores que hagan lo siguiente:
 
@@ -162,7 +162,7 @@ Ahora volvemos a ejecutarlo, en el mismo lugar donde *config.txt* está con el p
 $ python config.py
 Found config.txt but couldn't read it
 ```
-![](images/img5.png)
+![](images/img5.PNG)
 
 Eliminamos el archivo config.txt para asegurarnos de que se alcanza el primer bloque `except` en su lugar:
 ```
@@ -198,7 +198,7 @@ Si necesitas acceder al error asociado a la excepción, debes actualizar la lín
 got a problem trying to read the file: [Errno 2] No such file or directory: 'mars.jpg'
 ```
 
-![](images/img6.png)
+![](images/img6.PNG)
 
 En este caso, `as err` significa que `err` se convierte en una variable con el objeto de excepción como valor. Después, usa este valor para imprimir el mensaje de error asociado a la excepción. Otra razón para usar esta técnica es acceder directamente a los atributos del error. Por ejemplo, si detecta una excepción `OSError` más genérica, que es la excepción primaria de `FilenotFoundError` y `PermissionError`, podemos diferenciarlas mediante el atributo `.errno`:
 
@@ -214,7 +214,7 @@ En este caso, `as err` significa que `err` se convierte en una variable con el o
 Couldn't find the config.txt file!
 ```
 
-![](images/img7.png)
+![](images/img7.PNG)
 
 Intenta usar siempre la técnica que proporcione la mejor legibilidad para el código y que ayude a mantenerlo en el futuro. A veces es necesario usar código menos legible para ofrecer una mejor experiencia de usuario cuando se produce un error.
 
@@ -241,7 +241,7 @@ PruProbemos con cinco astronautas, 100 litros de agua sobrante y dos días:
 'Total water left after 2 days is: -10 liters'
 ```
 
-![](images/img8.png)
+![](images/img8.PNG)
 
 Esto no es muy útil, ya que una carencia en los litros sería un error. Después, el sistema de navegación podría alertar a los astronautas que no habrá suficiente agua para todos en dos días. Si eres un ingeniero(a) que programa el sistema de navegación, podrías generar una excepción en la función water_left() para alertar de la condición de error:
 
@@ -263,7 +263,7 @@ Traceback (most recent call last):
 RuntimeError: There is not enough water for 5 astronauts after 2 days!
 ```
 
-![](images/img9.png)
+![](images/img9.PNG)
 
 En el sistema de navegación, el código para señalar la alerta ahora puede usar `RuntimeError` para generar la alerta:
 
@@ -283,7 +283,7 @@ Traceback (most recent call last):
 TypeError: can't multiply sequence by non-int of type 'NoneType'
 ```
 
-![](images/img10.png)
+![](images/img10.PNG)
 
 El error de `TypeError` no es muy descriptivo en el contexto de lo que espera la función. Actualizaremos la función para que use `TypeError`, pero con un mensaje mejor:
 ```
@@ -317,7 +317,7 @@ Traceback (most recent call last):
   File "<stdin>", line 9, in water_left
 TypeError: All arguments must be of type int, but received: '3'
 ```
-![](images/img11.png)
+![](images/img11.PNG)
 
 
 ## Resumen

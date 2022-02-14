@@ -34,7 +34,7 @@ Crea un entorno virtual mediante ``venv``
 
 Ahora ves en tu terminal ``(env)``. Eso significa que has activado tu entorno virtual y se ha aislado del resto de tu máquina.
 
-![](images/img-1.png)
+![](images/img-1.PNG)
 
 ## Instalar una biblioteca
 
@@ -67,7 +67,7 @@ Ahora que estás dentro de tu entorno virtual, puedes instalar una biblioteca y 
     six==1.16.0
     ```
 
-    ![](images/img-2.png)
+    ![](images/img-2.PNG)
 
 ### Desactivar un entorno virtual
 
@@ -80,7 +80,7 @@ deactivate
 
 Observa cómo cambia el mensaje de tu terminal ``(env)`` a cómo se veía antes.
 
-![](images/img-3.png)
+![](images/img-3.PNG)
 
 ¡Felicidades! Has logrado crear y usar correctamente un entorno virtual.
 
